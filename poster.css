@@ -1,0 +1,102 @@
+/* Global Styles */
+body {
+    font-family: 'Alata', sans-serif;
+    background-color: #180018;
+    color: #DBB2AE;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #DBB2AE;
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Layout for the section */
+.major-uiux-project {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Image slider styles */
+.image-slider {
+    position: relative;
+    width: 55%;
+    height: 600px; /* Adjusted height for larger images */
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.image-slider img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    opacity: 0;
+    transform: scale(1.1);
+    transition: opacity 1s ease, transform 1s ease; /* Animation for fade and zoom */
+}
+
+.image-slider img.active {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Prev/Next buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+    font-size: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Info section styles */
+.info-section {
+    width: 40%; /* Adjust width for larger image area */
+    background-color: #844D6A;
+    padding: 20px;
+    border-radius: 15px;
+    color: #DBB2AE;
+}
+
+.info-section h3 {
+    font-family: 'Alfa Slab One', cursive;
+    color: #DBB2AE;
+    font-size: 30px;
+}
+
+.info-section p {
+    margin: 15px 0;
+}
+

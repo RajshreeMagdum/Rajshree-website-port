@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajshree Magdum Portfolio - Flipbook</title>
+    <link rel="stylesheet" href="trying.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="container">
+            <h1><a href="index.html" style="text-decoration: none; color: #DBB2AE;">Rajshree Magdum</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="skills.html">Resume</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="getintouch.html" class="get-in-touch">Get in touch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Flipbook container -->
+    <section id="flipbook">
+        <div class="flipbook-container">
+            <div class="page cover">
+                <img src="Brand Manual page 1.png" alt="Cover Page">
+                <button class="open-btn" onclick="openBook()">Open</button>
+            </div>
+            <!-- Pages 1-21 -->
+            <div class="page" id="page1"><img src="Brand Manual Page 3.png" alt="Page 1"></div>
+            <div class="page" id="page2"><img src="4.png" alt="Page 2"></div>
+            <div class="page" id="page3"><img src="5.png" alt="Page 3"></div>
+            <div class="page" id="page4"><img src="BM logo.png" alt="Page 4"></div>
+            <div class="page" id="page5"><img src="Screenshot 2024-10-18 at 2.09.45 AM.png" alt="Page 5"></div>
+            <div class="page" id="page6"><img src="logo 2.png" alt="Page 6"></div>
+            <div class="page" id="page7"><img src="10.png" alt="Page 7"></div>
+            <div class="page" id="page8"><img src="BM 10.png" alt="Page 8"></div>
+            <div class="page" id="page9"><img src="BM 11.png" alt="Page 9"></div>
+            <div class="page" id="page10"><img src="Colour 1.png" alt="Page 10"></div>
+            <div class="page" id="page11"><img src="colour 2.png" alt="Page 11"></div>
+            <div class="page" id="page12"><img src="typography 1.png" alt="Page 12"></div>
+            <div class="page" id="page13"><img src="typography 2.png" alt="Page 13"></div>
+            <div class="page" id="page14"><img src="photography 1.png" alt="Page 14"></div>
+            <div class="page" id="page15"><img src="photography 2.png" alt="Page 15"></div>
+            <div class="page" id="page16"><img src="BM Mock ups.png" alt="Page 16"></div>
+            <div class="page" id="page17"><img src="BM Mock up 1.png" alt="Page 17"></div>
+            <div class="page" id="page18"><img src="BM Mock up 2.png" alt="Page 18"></div>
+            <div class="page" id="page19"><img src="BM Mock up 3.png" alt="Page 19"></div>
+            <div class="page" id="page20"><img src="BM Mock up 4.png" alt="Page 20"></div>
+            <div class="page last-page" id="page21"><img src="Last page 1.png" alt="Page 21">
+                <button class="home-btn" onclick="location.href='index.html'">Back to Home</button>
+            </div>
+        </div>
+        <div class="navigation">
+            <button class="prev-btn" onclick="prevPage()">Previous</button>
+            <button class="next-btn" onclick="nextPage()">Next</button>
+        </div>
+    </section>
+
+    <script>
+        let currentPage = 0;
+        const pages = document.querySelectorAll('.page');
+        
+        function openBook() {
+            // Hide the cover and show the first page
+            pages[0].classList.add('flipped');
+            currentPage++;
+            updateButtonVisibility();
+        }
+
+        function nextPage() {
+            if (currentPage < pages.length - 1) {
+                pages[currentPage].classList.add('flipped');
+                currentPage++;
+                updateButtonVisibility();
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 0) {
+                pages[currentPage - 1].classList.remove('flipped');
+                currentPage--;
+                updateButtonVisibility();
+            }
+        }
+
+        function updateButtonVisibility() {
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const homeBtn = document.querySelector('.home-btn');
+
+            // Hide navigation buttons on the cover page
+            if (currentPage === 0) {
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+            } else if (currentPage === 1) {
+                prevBtn.style.display = 'none'; // Hide previous button on Page 1
+                nextBtn.style.display = 'inline-block';
+            } else if (currentPage === pages.length - 1) {
+                nextBtn.style.display = 'none'; // Hide next button on the last page (Page 21)
+                homeBtn.style.display = 'block'; // Show home button
+                prevBtn.style.display = 'inline-block'; // Still show the previous button
+            } else {
+                prevBtn.style.display = 'inline-block';
+                nextBtn.style.display = 'inline-block';
+                homeBtn.style.display = 'none'; // Hide home button for other pages
+            }
+        }
+
+        // Initialize button visibility
+        updateButtonVisibility();
+    </script>
+    <script src="trying.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajshree Magdum Portfolio</title>
+    <link rel="stylesheet" href="websiteportifolio.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+        <h1><a href="index.html" style="text-decoration: none; color: #DBB2AE;">Rajshree Magdum</a></h1>
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="skills.html">Resume</a></li>
+                <li><a href="work card.html">Work</a></li>
+                <li><a href="get in touch.html" class="get-in-touch">Get in touch</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <section id="about" class="about-section">
+        <div class="content">
+            <div class="left">
+                <img src="MEE photo.png" alt="Rajshree's Image" class="profile-pic">
+                <div class="arrows-container">
+                    <span class="trait" data-trait="Professional Yet Approachable">Professional Yet Approachable</span>
+                    <span class="trait" data-trait="Passionate">Passionate</span>
+                    <span class="trait" data-trait="Adaptable">Adaptable</span>
+                    <span class="trait" data-trait="Empathetic">Empathetic</span>
+                    <span class="trait" data-trait="Caring">Caring</span>
+                </div>
+            </div>
+            <div class="right">
+                <h2>Hello, I'm Rajshree </h2>
+                <h2>An Ui/Ux Designer</h2>
+                <p>
+                    I try to enjoy little things in life that make living better. I'm a keen, hardworking, and reliable individual. I am a bright and receptive person, able to communicate well with people at all levels. I work with my own initiative and am flexible in my approach to work duties. I have a good sense of humor and a pleasant approach.
+                </p>
+                <p>The following are the results of my work from several projects that I have worked on over the last few years.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scrollable Projects Section -->
+    <section id="recent-works-scroll" class="recent-works-scroll-section">
+        <div class="scroll-wrapper">
+            <!-- First line scrolling left to right -->
+            <div class="scroll-line left-to-right">
+                <span>recent project</span>
+                <span>recent project</span>
+                <span>recent project</span>
+                <span>recent project</span>
+                <span>recent project</span>
+            </div>
+            <!-- Second line scrolling right to left -->
+            <div class="scroll-line right-to-left">
+                <span>recent project</span>
+                <span>recent project</span>
+                <span>recent project</span>
+                <span>recent project</span>
+                <span>recent project</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smooth scroll for navigation -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<div class="card-container">
+    <div class="card">
+      <img src="Frame 49.jpg" alt="Project Image">
+      <div class="card-content">
+        <h3 class="project-title">The Cookmate App</h3>
+        <p class="project-description">CookMate simplifies kitchen multitasking with automation, monitoring, voice control, notifications for convenience.</p>
+        <a href="https://www.behance.net/gallery/209736133/UIUX-Case-Study-on-stove" target="_blank" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="Frame 1.jpg" alt="Project Image">
+      <div class="card-content">
+        <h3 class="project-title">UI/UX Project CuddleTales</h3>
+        <p class="project-description">A app for pet edcation</p>
+        <a href="https://www.behance.net/gallery/210428847/A-app-for-pet-education?" target="_blank" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="MacBook Air (2022).jpg" alt="Project Image">
+      <div class="card-content">
+        <h3 class="project-title">Internshala Case Study</h3>
+        <p class="project-description">Redesiging internshala website case study
+        </p>
+        <a href="https://www.behance.net/gallery/210431949/Internshala-Case-Study?" target="_blank" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+    <div class="card-container">
+        <div class="card">
+          <img src="mockup sporty 1.jpg" alt="Project Image">
+          <div class="card-content">
+            <h3 class="project-title">Game Design Sporty Jumpers</h3>
+            <p class="project-description"> Sporty Jumpers is a mobile game based on studying exsiting game called stack jump</p>
+            <a href="https://www.behance.net/gallery/210474921/Gaming-App-Sporty-Jumpers?" class="read-more-btn">Read More</a>
+          </div>
+        </div>
+      
+        <div class="card">
+          <img src="classic sloth poster mockup.jpg" alt="Project Image">
+          <div class="card-content">
+            <h3 class="project-title">7 Sins Posters</h3>
+            <p class="project-description">Typography posters that showcase the 7 sins</p>
+            <a href="posters.html" target="_blank" class="read-more-btn">Read More</a>
+          </div>
+        </div>
+      
+        <div class="card">
+          <img src="Free_Candle_Mockup_Branding.jpg" alt="Project Image">
+          <div class="card-content">
+            <h3 class="project-title">Brand Manual For A Jewerllery Brand</h3>
+            <p class="project-description"> Charism jewelry collections infused with the unique spirit of each travel destination
+            </p>
+            <a href="trying.html" target="_blank" class="read-more-btn">Read More</a>
+          </div>
+        </div>
+      
+
+  </section>  
+    <section id="video-gallery">
+        <h2 class="section-title">Additional-skills </h2>
+        <div class="video-container">
+            <div class="video-box">
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="Butter_typographyvideo_PES1UG22BD094_Rajshree.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <h3>Typography Butter Song Made Using After Effects</h3>
+            </div>
+            
+            <div class="video-box">
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="7DeadlysinsTrailer_094_Rajshree.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <h3>Typography Sins Movie Trailer</h3>
+            </div>
+        </div>
+    </section>
+    <div class="footer-section">
+        <div class="footer-content">
+          <p class="footer-intro">
+            I understand it might be a challenge to take a chance on a junior designer, but I am confident that my dedication and passion for design will quickly make me an invaluable member of your team.
+          </p>
+      
+          <div class="footer-columns">
+            <!-- Reach Me Section -->
+            <div class="contact-info">
+              <h3>REACH ME AT</h3>
+              <p><a href="mailto:rajshreemagdum30@gmail.com">rajshreemagdum30@gmail.com</a></p>
+              <p>8010480558</p>
+            </div>
+      
+            <!-- Social Section -->
+            <div class="social-info">
+              <h3>SOCIAL</h3>
+              <p><a href="https://www.behance.net/rajshreemagdum" target="_blank">Behance</a>, <a href="https://www.instagram.com/rajshree_mag30?igsh=MW1raHh5N3ZxODdpZg%3D%3D&utm_source=qr" target="_blank">Instagram</a></p>
+            </div>
+      
+            <!-- Say Hello Button -->
+             <!-- Place this code where you want the "Say Hello" feature to appear -->
+
+        <div class="say-hello">
+            <a href="mailto:rajshreemagdum30@gmail.com" class="say-hello-btn">SAY HELLO.</a>
+          </div>
+        </div>
+      </div>
+    </div> 
+</div>
+<footer>
+  <p>&copy; 2024 Rajshree Magdum Portfolio</p>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
